@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dashboard · VPS Panel</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <strong>VPS Panel</strong>
+    <div class="topbar-right"><span id="who" class="muted"></span><button id="logout" class="btn ghost">Sign out</button></div>
+  </header>
+  <main class="container">
+    <div class="page-head">
+      <div><h2>Your servers</h2><p class="muted">Every server gets 2 GB RAM, 1 vCPU and 10 GB disk.</p></div>
+      <div class="head-actions"><select id="type" aria-label="VPS type" hidden></select><button id="create" class="btn primary">Create VPS</button></div>
+    </div>
+    <p id="msg" class="msg" role="alert"></p>
+    <div id="list" class="list"></div>
+    <div id="empty" class="empty" hidden>
+      <p>You don't have a server yet.</p><p class="muted">Select Create VPS and it will be ready in a few seconds.</p>
+    </div>
+  </main>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
