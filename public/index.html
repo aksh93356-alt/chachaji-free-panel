@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sign in · VPS Panel</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-wrap">
+    <section class="auth-pitch">
+      <h1>A Linux server of your own, in one click.</h1>
+      <pre class="cmd" aria-hidden="true"><span class="dim">$</span> ssh root@your-server -p 24817
+<span class="dim">root@vps:~#</span> <span class="cursor"></span></pre>
+      <p class="muted">2 GB RAM, 1 vCPU and 10 GB disk. Use it from the browser or any SSH client.</p>
+    </section>
+
+    <section class="card auth-card">
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="login" role="tab">Sign in</button>
+        <button class="tab" data-tab="register" role="tab">Create account</button>
+        <span class="tab-ink"></span>
+      </div>
+
+      <form id="login" class="auth-form">
+        <label>Email or username<input name="login" autocomplete="username" required></label>
+        <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+        <button class="btn primary" type="submit">Sign in</button>
+      </form>
+
+      <form id="register" class="auth-form" hidden>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Username<input name="username" autocomplete="username" required minlength="3" maxlength="20" pattern="[A-Za-z0-9_]+"></label>
+        <label>Password<input name="password" type="password" autocomplete="new-password" required minlength="8"></label>
+        <button class="btn primary" type="submit">Create account</button>
+      </form>
+      <p id="msg" class="msg" role="alert"></p>
+    </section>
+  </main>
+  <script src="/js/auth.js"></script>
+</body>
+</html>
