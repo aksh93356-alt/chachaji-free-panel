@@ -1,0 +1,23 @@
+{
+  "name": "vps-panel",
+  "version": "1.0.0",
+  "description": "Free VPS management panel: Docker containers with SSH + web terminal",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/xterm": "^5.5.0",
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.3.0",
+    "cookie": "^0.7.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "ssh2": "^1.15.0",
+    "ws": "^8.18.0"
+  }
+}
